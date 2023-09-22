@@ -1,0 +1,284 @@
+// pricing area start
+.single-pricing-solari-area{
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 34px rgba(0, 0, 0, 0.1);
+    position: relative;
+    background: #fff;
+    transition: .3s;
+    @media #{$large-mobile} {
+        padding: 20px;
+    }
+    &::after{
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        margin: -1px;
+        border-radius: inherit;
+        background: linear-gradient(to bottom, #4AAB3D, #4aab3d00);
+        transition: 0.3s;
+        opacity: 0;
+    }
+    .pre-title{
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 28px;
+        color: #4AAB3D;
+    }  
+    .title-price{
+        font-weight: 700;
+        font-size: 34px;
+        color: #1F1F25;
+        line-height: 44px;
+        margin-top: 14px;
+        span{
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 44px;
+        }
+    } 
+    .pricing-oppertunity-wrapper{
+        margin-bottom: 30px;
+        .single{
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 5px;
+            &::after{
+                position: absolute;
+                left: 0;
+                height: 8px;
+                width: 8px;
+                border-radius: 50%;
+                background: var(--color-primary);
+                content: '';
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+    }
+    a.rts-btn{
+        text-align: center;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: max-content;
+        background: transparent;
+        color: var(--color-primary);
+        &::before{
+            background: transparent;
+            border: 1px solid var(--color-primary);
+        }
+    }
+    &:hover{
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.03);
+        &::after{
+            opacity: 1;
+        }
+    }
+}
+
+
+.single-team-solari-h3{
+    position: relative;
+    margin-bottom: 24px;
+    overflow: hidden;
+    display: block;
+    &:last-child{
+        margin-bottom: 0;
+    }
+    .name-social-area-wrapper{
+        position: absolute;
+        bottom: 00px;
+        left: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 80%;
+        opacity: 0;
+        bottom: -50px;
+        transition: .3s;
+        .name-area{
+            p{
+                margin-bottom: 0;
+                background: var(--color-primary);
+                padding: 2px 8px;
+                color: #fff;
+                border-radius: 5px 5px 0 0;
+                max-width: max-content;
+            }
+            .title{
+                border-radius: 0 0 5px 5px;
+                background: #fff;
+                padding: 5px 6px;
+                font-weight: 700;
+                font-size: 18px;
+                line-height: 24px;
+            }
+        }
+        .share-icon{
+            position: relative;
+            cursor: pointer;
+            transition: .3s;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            border-radius: 50%;
+            text-align: center;
+            background: var(--color-primary);
+            color: #FFFFFF;
+            i.fa-share-nodes{
+                transition: .3s;
+            }
+            .share-icons-wrapper{
+                position: absolute; 
+                top: -140px;
+                ul{
+                    padding: 0;
+                    margin: 0;
+                    list-style: none;
+                    li{
+                        margin: 5px 0;
+                        padding: 0;
+                        transform: translateY(20px);
+                        opacity: 0;
+                        transition: 1.5s;
+                        &:nth-child(2){
+                            transition: 1.2s;
+                        }
+                        &:nth-child(3){
+                            transition: .9s;
+                        }
+                        &:nth-child(4){
+                            transition: .6s;
+                        }
+                        a{
+                            height: 40px;
+                            width: 40px;
+                            background: #fff;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            transition: .3s;
+                            border-radius: 50%;
+                            i{
+                                transition: .3s;
+                            }
+                        }
+                        &:hover{
+                            a{
+                                background: var(--color-primary);
+                                i{
+                                    color: #fff;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &:hover{
+                background: var(--color-primary);
+                i.fa-share-nodes{
+                    color: #fff;
+                }
+                ul{
+                    li{
+                        transform: translateY(0);
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+    &:hover{
+        .name-social-area-wrapper{
+            opacity: 1;
+            bottom: 0;
+        }
+    }
+}
+
+
+.single-project-solari-h3{
+    position: relative;
+    margin-bottom: 24px;
+    overflow: hidden;
+    display: block;
+    .thumbnail{
+        img{
+            width: 100%;
+            border-radius: 10px;
+        }
+    }
+    &:last-child{
+        margin-bottom: 0;
+    }
+    .name-social-area-wrapper{
+        position: absolute;
+        bottom: 00px;
+        left: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 80%;
+        opacity: 0;
+        bottom: -50px;
+        transition: .3s;
+        .name-area{
+            p{
+                margin-bottom: 0;
+                background: var(--color-primary);
+                padding: 2px 8px;
+                color: #fff;
+                border-radius: 5px 5px 0 0;
+                max-width: max-content;
+            }
+            .title{
+                border-radius: 0 0 5px 5px;
+                background: #fff;
+                padding: 5px 6px;
+                font-weight: 700;
+                font-size: 18px;
+                line-height: 24px;
+            }
+        }
+        .share-icon{
+            i{
+                width: 40px;
+                height: 40px;
+                background: var(--color-primary);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                color: #fff;
+                cursor: pointer;
+            }
+        }
+    }
+    &:hover{
+        .name-social-area-wrapper{
+            opacity: 1;
+            bottom: 0;
+        }
+    }
+}
+.mt-dec--200{
+    margin-top: -330px;
+    @media(max-width:991px){
+        margin-top: 0;
+    }
+}
+.solari-title-area-three.text-left{
+    span.pre-title{
+        margin: 0;
+        margin-bottom: 16px;
+    }
+}
+.pt--210{
+    padding-top: 210px;
+}
